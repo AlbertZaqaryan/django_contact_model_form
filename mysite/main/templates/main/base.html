@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<header>
+    <h1>{% block name %}{% endblock %}</h1>
+    <hr>
+    <a href="{% url 'home' %}"><button>Home</button></a>
+    <a href="{% url 'about' %}"><button>About</button></a>
+    <a href="{% url 'contact' %}"><button>Contact</button></a>
+</header>
+<body>
+    {% block body %}{% endblock %}
+</body>
+
+<footer>
+    <ul>
+        <hr>
+        <li>Adres - Komitas</li>
+        <li>Phone - 7445585</li>
+        <li>Company - SmartCode</li>
+        <li>Email - test@gmail.com</li>
+    </ul>
+</footer>
+</html>
